@@ -1,3 +1,7 @@
+**requirement to run this app:**
+- java 8 
+- maven 3
+
 ** to run tests**
 
 > mvn clean test
