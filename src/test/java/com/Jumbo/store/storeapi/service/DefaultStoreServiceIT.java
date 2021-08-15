@@ -37,11 +37,13 @@ public class DefaultStoreServiceIT {
     @Test
     @DisplayName("integration test for GetTopStoresByDistance")
     public void testGetTopStoresByDistance(){
-
-        Position position=new Position(12,34);
-
+        //location of one of test data
+        Position position=new Position(4.615551,51.778461);
         List<Store> stores=storeService.GetTopStoresByDistance(position);
+
         Assert.assertEquals(5,stores.size());
+        Assert.assertEquals(4.615551,stores.get(0).getLocation().getLongitude(),0);
+        Assert.assertEquals(51.778461,stores.get(0).getLocation().getLatitude(),0);
 
     }
 

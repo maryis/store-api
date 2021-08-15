@@ -70,8 +70,8 @@ public class StoreControllerIT {
                 .setUuid("1234Yx4Xqp0AAAFIHigYwKrH")
                 .setLocation(new Location.Builder()
                     .setCity("city1")
-                    .setLatitude(234)
-                    .setLatitude(34)
+                    .setLatitude(4.615551)
+                    .setLatitude(51.778461)
                     .build())
                 .build();
 
