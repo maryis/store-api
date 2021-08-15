@@ -32,7 +32,7 @@ public class LoginControllerIT {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(userBody))
                 .andExpect(status().isOk())
-                .andExpect(content().string(hasLength(174)));
+                .andExpect(jsonPath("$.token",notNullValue()));
     }
 
     @Test

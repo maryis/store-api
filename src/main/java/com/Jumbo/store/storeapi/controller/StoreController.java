@@ -44,12 +44,9 @@ public class StoreController {
     }
 
     @PutMapping(value = "/{id}")
-    public Store updateStore(@PathVariable String id,@RequestBody Store store) {
-        logger.info("update store with uuid: {} , {}", id, store);
-        if(store.getUuid()!=id)
-            throw new DataNotFoundException("Different uuid has been sent");
-
-        return storeService.updateStore(id,store)
+    public Store updateStore(@RequestBody Store store) {
+        logger.info("update store with uuid: {} , {}", store.getUuid(), store);
+        return storeService.updateStore(store.getUuid(),store)
                 .orElseThrow(()->new DataNotFoundException("Could not find store with ID provided"));
     }
 

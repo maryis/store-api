@@ -2,7 +2,7 @@
 - java 8 
 - maven 3
 
-** to run tests**
+**to run tests**
 
 > mvn clean test
 
@@ -35,4 +35,6 @@ they should be move to DB later
 - I've used a ready code (HaversineAlgorithm) to find distance of two location
 - later we can add a Docker file, or add jib plugin and generate docker image without writing dockerfile
 - for now I included Integration tests to test phase, but usually we have a separate build phase/pipeline for them
+- I did not find the time to comment on the classes and methods
+- Test coverage is not high, I've just written some sample tests for different layers
  
